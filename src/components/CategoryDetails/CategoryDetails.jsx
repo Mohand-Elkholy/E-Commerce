@@ -66,10 +66,10 @@ return (
                 </Tooltip>
                 <Link to={`/ProductDetails/${proudct._id}`}>
                 <h6 className='text-[#9c34c2] mt-2'>{proudct.category.name}</h6>
-                <p>{proudct.title.split(" ").slice(0,2).join(" ")}</p>
+                <p className='dark:text-slate-100'>{proudct.title.split(" ").slice(0,2).join(" ")}</p>
                 </Link>
                 <div className='flex items-center justify-between'>
-                    <p className='mt-2'><span>EGP</span> <span>{proudct.priceAfterDiscount} </span> <span className={proudct.priceAfterDiscount?'line-through text-gray-300':''}>{proudct.price}</span> {proudct.priceAfterDiscount?<span className=' text-[#9c34c2]'>{100-Math.ceil(proudct.priceAfterDiscount/proudct.price*100)}%</span> : ""}</p>
+                    <p className='mt-2 dark:text-slate-100'><span>EGP</span> <span>{proudct.priceAfterDiscount} </span> <span className={proudct.priceAfterDiscount?'line-through text-gray-300 dark:text-slate-400':''}>{proudct.price}</span> {proudct.priceAfterDiscount?<span className=' text-[#9c34c2]'>{100-Math.ceil(proudct.priceAfterDiscount/proudct.price*100)}%</span> : ""}</p>
                 </div>
                 <div className=" flex items-center justify-center mt-4">
                     <IconCart id={proudct._id} />
