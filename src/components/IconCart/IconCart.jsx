@@ -12,9 +12,9 @@ export default function IconCart({id}) {
     }
 return (
     <>
-    <div   className=" min-w-36    cursor-pointer  border rounded-lg p-2 bg-white dark:bg-slate-600 dark:text-slate-100">
+    <div   className=" min-w-30    cursor-pointer  border rounded-lg p-2 bg-white dark:bg-slate-600 dark:text-slate-100">
         {products?.map((added)=>added.product._id == id ).includes(true)?<>
-        <div className="flex items-center">
+        <div className="flex items-center ">
             
                         {products.filter((item)=>item.product._id == id)[0].count == 1 ? <div onClick={()=>{
                             handelDelete(id)
@@ -41,11 +41,11 @@ return (
                     </div>
         
         </>:<>
-        <div onClick={()=>{
+        <div className='text-center' onClick={()=>{
             handelAddProduct(id)
     }}>
-        <i  className="fa-solid fa-cart-plus text-[#9c34c2] mr-3"></i>
-        <span>Add To Cart</span>
+        <i  className="fa-solid fa-cart-plus text-[#9c34c2] mr-3 text-xs md:text-base lg:text-lg"></i>
+        <span className='text-xs md:text-base lg:text-lg'>Add To Cart</span>
         </div>
         
         </>}

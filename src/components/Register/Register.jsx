@@ -63,10 +63,10 @@ return (
         <Helmet>
                     <title>Register</title>
         </Helmet>
-        <div className='w-1/2 mx-auto  p-5 rounded-lg boxshadow2'>
-        <h1 className='text-2xl text-[#9c34c2]'>Register Now :</h1>
-        <form className='mt-8' onSubmit={registerFormik.handleSubmit}>
-            <div className="w-full  pt-3">
+        <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto  p-5 rounded-lg boxshadow2'>
+        <h1 className='text-base md:text-xl text-[#9c34c2]'>Register Now :</h1>
+        <form className='mt-3' onSubmit={registerFormik.handleSubmit}>
+            <div className="w-full  ">
                 <Input onBlur={registerFormik.handleBlur} isInvalid={registerFormik.errors.name && registerFormik.touched.name ? true : false} errorMessage={registerFormik.errors.name} type="text" label="Name"   variant={"underlined"} color="secondary" name="name" autocomplete=""  labelPlacement="outside" size='lg'  onChange={registerFormik.handleChange} value={registerFormik.values.name}/>
             </div>
             <div className="w-full  pt-5">

@@ -59,15 +59,9 @@ return (
     <Helmet>
         <title>Product Details</title>
     </Helmet>
-    <div className='flex flex-wrap items-center justify-between p-8 '>
-        <div className='w-full md:w-1/2 lg:w-1/3 flex items-center justify-center'>
-            <div className='flex flex-col items-center justify-center gap-y-1 w-[30%]'>
-                {imgs.map((photo , index)=><div key={index} className='w-[80px] md:w-[50px] lg:w-[60px]'>
-                    <img src={photo} alt={`image${index}`} onClick={()=>handelImg(photo)} />
-                </div>)}
-                
-            </div>
-            <div className='img-zoom w-[65%]' onMouseEnter={()=>{setShow(true)}} onMouseLeave={()=>setShow(false)} onMouseMove={handelMouseHover}>
+    <div className='flex flex-wrap items-center justify-between p-8  '>
+        <div className='w-full md:w-1/2 lg:w-1/3 flex items-center justify-center flex-col gap-y-1'>
+            <div className='img-zoom ' onMouseEnter={()=>{setShow(true)}} onMouseLeave={()=>setShow(false)} onTouchMove={handelMouseHover} onMouseMove={handelMouseHover}>
                 <img src={Img?Img:Details.imageCover} alt={Details.title}  className='w-auto' />
                 {show && <div style={{
                     position:"absolute",
@@ -86,18 +80,31 @@ return (
                     }}></div>
                 </div>}
             </div>
+            <div className='flex flex-wrap  items-center justify-center   gap-y-1'>
+                {imgs.map((photo , index)=><div key={index} className={`w-1/${imgs.length >4?4:imgs.length}`}>
+                    <div className='p-2'>
+                        <img src={photo} alt={`image${index}`} onClick={()=>handelImg(photo)} />
+                    </div>
+                    
+                </div>)}
+                
+            </div>
+            
         </div>
         <div className='w-full md:w-1/2 lg:w-2/3 mt-5'>
-            <div className='px-8 relative'>  
-                {Details.priceAfterDiscount?<div className=' absolute px-0 py-2 md:p-2  bg-[#9c34c2b3] text-white right-0 top-0'>-{100-Math.ceil(Details.priceAfterDiscount/Details.price*100)}%</div> : ""}
-                <h2 className='text-[#9c34c2] text-3xl font-bold'>{Details.title} </h2>
-                <p className='mt-5 dark:text-slate-100'><span className='text-[#9c34c2] font-bold'>Category :</span> {Details.category.name}</p>
-                <p className='mt-2 dark:text-slate-100'><span className='text-[#9c34c2] font-bold'>Brand :</span> {Details.brand.name}</p>
-                <p className='mt-2 dark:text-slate-100'>{Details.description}</p>
+            <div className='px-8 '>  
+                <div className='flex items-center justify-between'>
+                <h2 className='text-[#9c34c2]  text-sm lg:text-xl font-bold'>{Details.title} </h2>
+                {Details.priceAfterDiscount?<div className='   px-1 py-2 lg:p-2  bg-[#9c34c2b3] text-white '>-{100-Math.ceil(Details.priceAfterDiscount/Details.price*100)}%</div> : ""}
+                </div>
+                
+                <p className='mt-5 dark:text-slate-100 text-sm lg:text-lg'><span className='text-[#9c34c2] font-bold'>Category :</span> {Details.category.name}</p>
+                <p className='mt-2 dark:text-slate-100 text-sm lg:text-lg'><span className='text-[#9c34c2] font-bold'>Brand :</span> {Details.brand.name}</p>
+                <p className='mt-2 dark:text-slate-100 text-sm lg:text-lg'>{Details.description}</p>
                 <div className='flex items-center justify-between mt-2'>
-                    <p className='dark:text-slate-100'><span className='text-[#9c34c2] font-bold'>Price :</span> <span className={Details.priceAfterDiscount?'line-through text-gray-100 dark:text-slate-400':''}>{Details.price}</span> <span>{Details.priceAfterDiscount} </span>  EGP</p>
+                    <p className='dark:text-slate-100 text-sm lg:text-lg'><span className='text-[#9c34c2] font-bold'>Price :</span> <span className={Details.priceAfterDiscount?'line-through text-gray-100 dark:text-slate-400':''}>{Details.price}</span> <span>{Details.priceAfterDiscount} </span>  EGP</p>
                     <Tooltip showArrow={true} content={`ratingsQuantity: ${Details.ratingsQuantity}`} color='secondary'>
-                        <p className='dark:text-slate-100'><span><i className='fa-solid fa-star text-purple-600'></i></span>{Details.ratingsAverage}</p>
+                        <p className='dark:text-slate-100 text-sm lg:text-lg'><span><i className='fa-solid fa-star text-purple-600'></i></span>{Details.ratingsAverage}</p>
                     </Tooltip>
                 </div>
                 <div className='flex items-center justify-center mt-3'>

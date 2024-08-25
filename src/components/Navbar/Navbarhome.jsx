@@ -60,8 +60,8 @@ return (
             <NavbarContent className="md:hidden " justify="center">
                 <NavbarBrand>
                 <Link to={"/Home"} className='flex items-center justify-center  '>
-                <img src={Logo} alt=""  className='w-[50px]'/>
-                <p className="title text-[#9c34c2] text-xl font-extrabold">MooShopping</p>
+                <img src={Logo} alt=""  className='w-[25px] md:w-[40px]'/>
+                <p className="title text-[#9c34c2] text-sm md:text-xl font-extrabold">MooShopping</p>
                 </Link>
                 </NavbarBrand>
             </NavbarContent>
@@ -102,16 +102,16 @@ return (
                     <NavbarItem>
                         <Link  to="/Wishlist" className='text-black dark:text-slate-100 dark:hover:text-[#9c34c2] text-lg hover:text-[#9c34c2] transition-all duration-400'>
                             <div className=' relative'>
-                            <i className="fa-solid fa-heart text-[#9c34c2]"></i>
-                            {numOfItemOfWishlist==0?"":<span className=' absolute top-[-10px] right-[-10px] text-xs w-2 h-2 rounded-full bg-[#9c34c2] text-white flex items-center justify-center p-2'>{numOfItemOfWishlist}</span>}
+                            <i className="fa-solid fa-heart text-[#9c34c2] text-xs md:text-base"></i>
+                            {numOfItemOfWishlist==0?"":<span className=' absolute top-[-5px] right-[-10px] md:top-[-10px] text-[10px] md:text-xs w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#9c34c2] text-white flex items-center justify-center p-2'>{numOfItemOfWishlist}</span>}
                             </div>
                         </Link>
                     </NavbarItem>
                     <NavbarItem>
                         <Link  to="/Cart" className='text-black dark:text-slate-100 dark:hover:text-[#9c34c2]   text-lg hover:text-[#9c34c2] transition-all duration-400'>
                             <div className=' relative'>
-                            <i className="fa-solid fa-cart-shopping text-[#9c34c2]"></i>
-                            {numberOfCartItems==0?"":<span className=' absolute top-[-10px] right-[-10px] text-xs w-2 h-2 rounded-full bg-[#9c34c2] text-white flex items-center justify-center p-2'>{numberOfCartItems}</span>}
+                            <i className="fa-solid fa-cart-shopping text-[#9c34c2] text-xs md:text-base"></i>
+                            {numberOfCartItems==0?"":<span className=' absolute top-[-5px] right-[-10px] md:top-[-10px] text-[10px] md:text-xs w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#9c34c2] text-white flex items-center justify-center p-2'>{numberOfCartItems}</span>}
                             </div>
                         </Link>
                     </NavbarItem>
@@ -120,7 +120,7 @@ return (
                             <img
                                 
                                 as="button"
-                                className="transition-transform w-10"
+                                className="transition-transform w-8 md:w-10"
                                 src={user}
                             />
                             
@@ -136,10 +136,10 @@ return (
                 </>
                 : <>
                 <NavbarItem >
-                <NavLink to="" className=' text-lg text-[#9c34c2]'>Login</NavLink>
+                <NavLink to="" className=' text-sm md:text-xl  text-[#9c34c2]'>Login</NavLink>
                 </NavbarItem>
                 <NavbarItem>
-                <NavLink   to="Register"  className='text-[#9c34c2] text-lg '>
+                <NavLink   to="Register"  className='text-[#9c34c2] text-sm md:text-xl  '>
                     Register
                 </NavLink>
                 </NavbarItem>
@@ -147,7 +147,7 @@ return (
                 <NavbarItem>
                     <label className="relative inline-flex items-center cursor-pointer" >
                         <input onClick={handelDarkMood} className="sr-only peer" defaultValue type="checkbox" />
-                        <div  className="w-16 h-8 rounded-full ring-0 peer duration-500 outline-none bg-white overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-6 before:w-6 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-6 after:h-6 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0" />
+                        <div  className="w-10 h-8 md:w-16 rounded-full ring-0 peer duration-500 outline-none bg-white overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-6 before:w-6 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-6 after:h-6 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0" />
                     </label>
 
                 </NavbarItem>

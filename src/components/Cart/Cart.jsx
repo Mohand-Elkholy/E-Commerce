@@ -25,14 +25,14 @@ return (
     </Helmet>
     {numberOfCartItems==0?<>
     <div className='  py-28'> 
-        <div className='flex justify-center items-center'>
-            <div className='text-center'>
-                <p className='text-2xl font-bold mb-3'>Your Shopping Cart Looks Empty .</p>
-                <p className='text-2xl font-semibold mb-5'>what are you waiting for ?</p>
+        <div className='flex justify-center items-center flex-col md:flex-row'>
+        <img src={cart} alt="cart" className='w-[150px] md:w-[200px] md:mr-6' />
+            <div className='text-center mt-5'>
+                <p className='text-base md:text-xl lg:text-3xl dark:text-slate-100  font-bold mb-3'>Your Shopping Cart Looks Empty .</p>
+                <p className='text-base md:text-lg lg:text-xl  dark:text-slate-100 font-semibold mb-5'>what are you waiting for ?</p>
                 <Link to={"/Products"} className='btn p-2'>Check Our Products</Link>
             </div>
         
-        <img src={cart} alt="cart" className='w-[200px]' />
         </div>
     </div>
     </>:<>
@@ -105,7 +105,7 @@ return (
         </table>
         <div className=' mt-5 mb-3 mr-3'><button onClick={()=>clearCart()} className='btn p-2 ml-auto block'>Clear Cart</button></div>
         </div>
-        <div className='w-1/3 mt-14 relative pb-20'>
+        <div className='w-full md:w-2/3 lg:w-1/3 mt-14 relative pb-20'>
             <h2 className='text-3xl font-bold text-[#9c34c2] mb-4 '>Cart Total</h2>
             <div className='flex items-center justify-between text-lg mb-2 pb-2 border-b-2 dark:text-slate-100'><span>SubTotal</span><span>{totalCartPrice} EGP</span></div>
             <div className='flex items-center justify-between text-lg mb-2 pb-2 border-b-2 dark:text-slate-100'><span>Shipping Fee</span><span>Free</span></div>

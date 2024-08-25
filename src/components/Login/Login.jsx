@@ -71,10 +71,10 @@ return (
         <Helmet>
                     <title>Login</title>
         </Helmet>
-        <div className='w-1/2 mx-auto  p-5 rounded-lg boxshadow2'>
-        <h1 className='text-2xl text-[#9c34c2]'>Login Now :</h1>
-        <form className='mt-8' onSubmit={loginFormik.handleSubmit}>
-            <div className="w-full  pt-5">
+        <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto  p-5 rounded-lg boxshadow2'>
+        <h1 className='text-base md:text-xl text-[#9c34c2]'>Login Now :</h1>
+        <form className='mt-3' onSubmit={loginFormik.handleSubmit}>
+            <div className="w-full  ">
                 <Input variant="underlined"  type="email" label="Email" onBlur={loginFormik.handleBlur}  isInvalid={loginFormik.errors.email && loginFormik.touched.email ? true : false} errorMessage={loginFormik.errors.email}   color="secondary"    name="email"   labelPlacement="outside"  size='lg'  onChange={loginFormik.handleChange} value={loginFormik.values.email}/>
             </div>
             <div className="w-full  pt-5">

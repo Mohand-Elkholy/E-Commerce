@@ -25,11 +25,11 @@ return (
         <Helmet>
             <title>Categories</title>
         </Helmet>
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5' >
+    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5' >
         {data.data.data.map(category => <div key={category._id} className=' border overflow-hidden text-center flex items-center justify-center flex-col boxshadow rounded-xl'>
             <Link to={`/CategoryDetails/${category.name}`}>
-            <img src={category.image} alt={category.name}  className='w-full h-[400px] md:h-[300px]'/>
-            <h3 className='text-[#9c34c2] py-4 font-bold text-xl'>{category.name}</h3>
+            <img src={category.image} alt={category.name}  className='w-full h-[200px] md:h-[300px]'/>
+            <h3 className='text-[#9c34c2] py-4 font-bold text-lg md:text-xl'>{category.name}</h3>
             </Link>
         </div>)}
     </div>

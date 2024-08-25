@@ -67,9 +67,9 @@ return (
     <Helmet>
                     <title>Update Profile</title>
         </Helmet>
-        <div className='w-1/2 mx-auto p-5 rounded-lg boxshadow2'>
-        <h1 className='text-2xl text-[#9c34c2]'>Register Now :</h1>
-        <form className='mt-8' onSubmit={updataProfileFormik.handleSubmit}>
+        <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto p-5 rounded-lg boxshadow2'>
+        <h1 className='text-base md:text-xl text-[#9c34c2]'>Register Now :</h1>
+        <form className='mt-3' onSubmit={updataProfileFormik.handleSubmit}>
             <div className="w-full  pt-3">
                 <Input onBlur={updataProfileFormik.handleBlur} isInvalid={updataProfileFormik.errors.name && updataProfileFormik.touched.name ? true : false} errorMessage={updataProfileFormik.errors.name} type="text" label="Name"   variant={"underlined"} color="secondary" name="name" autocomplete=""  labelPlacement="outside" size='lg'  onChange={updataProfileFormik.handleChange} value={updataProfileFormik.values.name}/>
             </div>

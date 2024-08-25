@@ -52,10 +52,10 @@ return (
     <Helmet>
         <title>Forget Password</title>
     </Helmet>
-    <div className='w-1/2 mx-auto p-5 rounded-lg boxshadow2'>
-        <h1 className='text-2xl text-[#9c34c2]'>Please Enter Your Email</h1>
-        <form className='mt-8' onSubmit={forgetPasswordFormik.handleSubmit}>
-            <div className="w-full  pt-5">
+    <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto p-5 rounded-lg boxshadow2'>
+        <h1 className='text-base md:text-xl text-[#9c34c2]'>Please Enter Your Email</h1>
+        <form className='mt-3' onSubmit={forgetPasswordFormik.handleSubmit}>
+            <div className="w-full  ">
                 <Input variant="underlined"  type="email" label="Email" onBlur={forgetPasswordFormik.handleBlur}  isInvalid={forgetPasswordFormik.errors.email && forgetPasswordFormik.touched.email ? true : false} errorMessage={forgetPasswordFormik.errors.email}   color="secondary"   name="email"   labelPlacement="outside"  size='lg'  onChange={forgetPasswordFormik.handleChange} value={forgetPasswordFormik.values.email}/>
             </div>
             <div className='flex items-center justify-between mt-3'>

@@ -53,10 +53,10 @@ return (
     <Helmet>
         <title>Reset Password</title>
     </Helmet>
-    <div className='w-1/2 mx-auto p-5 rounded-lg boxshadow2'>
-        <h1 className='text-2xl text-[#9c34c2]'>Please Enter Your Email & New Password</h1>
-        <form className='mt-8' onSubmit={resetPasswordFormik.handleSubmit}>
-            <div className="w-full  pt-5">
+    <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto p-5 rounded-lg boxshadow2'>
+        <h1 className='text-base md:text-xl text-[#9c34c2]'>Please Enter Your Email & New Password</h1>
+        <form className='mt-3' onSubmit={resetPasswordFormik.handleSubmit}>
+            <div className="w-full ">
                 <Input variant="underlined"  type="email" label="Email" onBlur={resetPasswordFormik.handleBlur}  isInvalid={resetPasswordFormik.errors.email && resetPasswordFormik.touched.email ? true : false} errorMessage={resetPasswordFormik.errors.email}   color="secondary"   name="email"   labelPlacement="outside"  size='lg'  onChange={resetPasswordFormik.handleChange} value={resetPasswordFormik.values.email}/>
             </div>
             <div className="w-full  pt-5">

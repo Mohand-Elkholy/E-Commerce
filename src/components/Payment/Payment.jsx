@@ -44,10 +44,10 @@ return (
     <Helmet>
                     <title>Payment</title>
         </Helmet>
-        <div className='w-1/2 mx-auto  p-5 rounded-lg boxshadow2'>
-        <h1 className='text-2xl text-[#9c34c2]'>{state.method}</h1>
-        <form className='mt-8' onSubmit={checkOutFormik.handleSubmit}>
-            <div className="w-full  pt-5">
+        <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto  p-5 rounded-lg boxshadow2'>
+        <h1 className='text-base md:text-xl text-[#9c34c2]'>{state.method}</h1>
+        <form className='pt-5' onSubmit={checkOutFormik.handleSubmit}>
+            <div className="w-full ">
                 <Input variant="underlined"  type="text" label="Details" onBlur={checkOutFormik.handleBlur}  isInvalid={checkOutFormik.errors.details && checkOutFormik.touched.details ? true : false} errorMessage={checkOutFormik.errors.details}   color="secondary"   name="details"   labelPlacement="outside"  size='lg'  onChange={checkOutFormik.handleChange} value={checkOutFormik.values.details}/>
             </div>
             <div className="w-full  pt-5">

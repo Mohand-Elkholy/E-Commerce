@@ -47,19 +47,19 @@ return (
           <div className='w-full lg:w-3/4'>
             <Slider {...settings} className='mt-1'>
               <div>
-                <img src={sliderImage1} alt="sliderImage1" className='w-full h-[300px]' />
+                <img src={sliderImage1} alt="sliderImage1" className='w-full h-[200px] md:h-[300px]' />
               </div>
               <div>
-                <img src={sliderImage2} alt="sliderImage2" className='w-full h-[300px]' />
+                <img src={sliderImage2} alt="sliderImage2" className='w-full h-[200px] md:h-[300px]' />
               </div>
               <div>
-                <img src={sliderImage3} alt="sliderImage3" className='w-full h-[300px]' />
+                <img src={sliderImage3} alt="sliderImage3" className='w-full h-[200px] md:h-[300px]' />
               </div>
               <div>
-                <img src={sliderImage4} alt="sliderImage4" className='w-full h-[300px]' />
+                <img src={sliderImage4} alt="sliderImage4" className='w-full h-[200px] md:h-[300px]' />
               </div>
               <div>
-                <img src={sliderImage5} alt="sliderImage5" className='w-full h-[300px]' />
+                <img src={sliderImage5} alt="sliderImage5" className='w-full h-[200px] md:h-[300px]' />
               </div>
             </Slider>
           </div>

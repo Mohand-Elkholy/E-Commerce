@@ -45,7 +45,7 @@ export default function BrandsSlider() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1
         }
       }
@@ -67,7 +67,7 @@ return (
     <Slider {...settings}>
         {data.data.data.map((category)=> <div key={category._id} className="text-center px-1">
           <Link to={`/BrandsDetails/${category.name}`}>
-          <img src={category.image} alt={category.name}  className='w-full h-44 rounded-full'/>
+          <img src={category.image} alt={category.name}  className='w-full h-44 rounded-lg'/>
             <h6 className='dark:text-slate-100'>{category.name}</h6>
           </Link>
         </div>)}

@@ -78,9 +78,9 @@ return (
     <Helmet>
                     <title>Change Password</title>
         </Helmet>
-        <div className='w-1/2 mx-auto p-5 rounded-lg boxshadow2'>
-        <h1 className='text-2xl text-[#9c34c2]'>Change Your Password</h1>
-        <form className='mt-8' onSubmit={changePasswordFormik.handleSubmit}>
+        <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto p-5 rounded-lg boxshadow2'>
+        <h1 className='text-base md:text-xl text-[#9c34c2]'>Change Your Password</h1>
+        <form className='mt-3' onSubmit={changePasswordFormik.handleSubmit}>
             
             <div className="w-full  pt-5">
                 <Input  variant="underlined" type="password" label="Current Password" onBlur={changePasswordFormik.handleBlur}  isInvalid={changePasswordFormik.errors.currentPassword && changePasswordFormik.touched.currentPassword ? true : false} errorMessage={changePasswordFormik.errors.currentPassword}  color="secondary"    name="currentPassword" labelPlacement="outside" size='lg'  onChange={changePasswordFormik.handleChange} value={changePasswordFormik.values.currentPassword}/>
