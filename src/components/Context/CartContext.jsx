@@ -29,6 +29,7 @@ export default function CartContextProvider({children}) {
       setCartId(res.data.data._id)
       setCartOwner(res.data.data.cartOwner)
       cookei.set("cartOwner" , res.data.data.cartOwner)
+      localStorage.setItem("cartOwner" , res.data.data.cartOwner)
       toast.success("Add Product Successfully" , {
                 duration:2000
             })
@@ -48,6 +49,7 @@ export default function CartContextProvider({children}) {
       setCartId(res.data.data._id)
       setCartOwner(res.data.data.cartOwner)
       cookei.set("cartOwner" , res.data.data.cartOwner)
+      localStorage.setItem("cartOwner" , res.data.data.cartOwner)
     })
     .catch((error)=>{
       console.log(error);
@@ -62,6 +64,7 @@ export default function CartContextProvider({children}) {
       setCartId(res.data.data._id)
       setCartOwner(res.data.data.cartOwner)
       cookei.set("cartOwner" , res.data.data.cartOwner)
+      localStorage.setItem("cartOwner" , res.data.data.cartOwner)
       return res
     })
     .catch((error)=>{

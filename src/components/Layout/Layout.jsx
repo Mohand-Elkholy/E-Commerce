@@ -3,7 +3,7 @@ import styles from "./Layout.module.css"
 import { Outlet } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import Navbarhome from '../Navbar/Navbarhome'
-import { Offline, Online } from 'react-detect-offline'
+import { Offline} from 'react-detect-offline'
 import { Toaster } from 'react-hot-toast'
 
 export default function Layout() {

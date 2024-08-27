@@ -2,16 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import styles from "./AllOrders.module.css"
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import Cookies from "universal-cookie"
 
 export default function AllOrders() {
     const [data, setData] = useState(null)
-    const cookei = new Cookies()
-    const cartOwner = cookei.get("cartOwner")
+    const cartOwner = localStorage.getItem("cartOwner")
     async function allOrders() {
     await axios.get(`https://ecommerce.routemisr.com/api/v1/orders/user/${cartOwner}`)
     .then((res)=>{
-        console.log(res.data);
         setData(res.data)
     })
     .catch((error)=>{
@@ -21,8 +18,6 @@ export default function AllOrders() {
 }
     useEffect(() => {
         allOrders()
-        console.log(cartOwner);
-        
     },[])
 return (
     <>

@@ -18,7 +18,6 @@ const [loading , setIsLoading] =useState(false)
         await axios.post("https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode" , values)
         .then(
             (data)=>{
-                console.log(data);
                 toast.success(`${data?.data?.status}`,{
                     duration:2000,
                 })
@@ -28,7 +27,6 @@ const [loading , setIsLoading] =useState(false)
         )
         .catch( 
             (data)=>{
-                console.log(data);
                 
             toast.error(`${data?.response.data.message}`,{
                     duration:2000,

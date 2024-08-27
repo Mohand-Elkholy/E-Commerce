@@ -36,12 +36,11 @@ export default function ChangePassword() {
                 console.log(data);
                 
                 setIsLoading(false)
-                
+                cookei.remove("token")
+                cookei.remove("email")
+                cookei.remove("name")
                 
                 navigate("/Login")
-                localStorage.removeItem("token")
-                localStorage.removeItem("email")
-                localStorage.removeItem("name")
                 setToken(null)
             }
         )
@@ -50,8 +49,6 @@ export default function ChangePassword() {
             toast.error(`${data.response.data.errors.msg}`,{
                     duration:2000,
                 })
-                console.log(data);
-                
             setIsLoading(false)
             }
             

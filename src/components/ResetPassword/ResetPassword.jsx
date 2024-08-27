@@ -20,7 +20,6 @@ const [loading , setIsLoading] =useState(false)
         await axios.put("https://ecommerce.routemisr.com/api/v1/auth/resetPassword" , values)
             .then(
                 (data)=>{
-                console.log(data);
                 toast.success(`Password Changed`,{
                     duration:2000,
                 })
@@ -30,7 +29,6 @@ const [loading , setIsLoading] =useState(false)
         )
         .catch( 
             (data)=>{
-                console.log(data);
             setIsLoading(false)
             }
             

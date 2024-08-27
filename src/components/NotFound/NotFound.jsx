@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from "./NotFound.module.css"
-import error from "../../assets/man-holding-plug-404-error-page-found-page_1150-65047.jpg"
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 export default function NotFound() {

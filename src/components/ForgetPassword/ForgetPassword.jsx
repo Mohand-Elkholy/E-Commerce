@@ -19,7 +19,6 @@ export default function ForgetPassword() {
         await axios.post("https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords" , values)
         .then(
             (data)=>{
-                console.log(data);
                 toast.success(`${data?.data?.message}`,{
                     duration:2000,
                 })
@@ -29,7 +28,6 @@ export default function ForgetPassword() {
         )
         .catch( 
             (data)=>{
-                console.log(data);
                 
             toast.error(`${data?.response.data.message}`,{
                     duration:2000,

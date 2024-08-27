@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./Loading.module.css"
-import { MutatingDots, Triangle } from 'react-loader-spinner'
+import {  Triangle } from 'react-loader-spinner'
 export default function Loading() {
 return (
     <>

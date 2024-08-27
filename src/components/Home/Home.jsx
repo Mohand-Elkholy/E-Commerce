@@ -4,8 +4,6 @@ import sliderImage2 from "../../assets/blog-img-2.jpeg"
 import sliderImage3 from "../../assets/grocery-banner.png"
 import sliderImage4 from "../../assets/grocery-banner-2.jpeg"
 import sliderImage5 from "../../assets/slider-2.jpeg"
-import sideImage1 from "../../assets/slider-image-2.jpeg"
-import sideImage2 from "../../assets/slider-image-3.jpeg"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Home.module.css"
@@ -63,10 +61,6 @@ return (
               </div>
             </Slider>
           </div>
-          {/* <div className='w-1/4  hidden lg:block'> 
-            <img src={sideImage1} alt="sideImage1" className='w-full h-[150px] rounded' />
-            <img src={sideImage2} alt="sideImage2" className='w-full h-[150px] rounded' />
-            </div> */}
           </div>
         <CategoriesSlider />
         <BrandsSlider />

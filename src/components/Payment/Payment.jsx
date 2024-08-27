@@ -3,7 +3,6 @@ import styles from "./Payment.module.css"
 import { Input } from '@nextui-org/react'
 import {useFormik } from 'formik'
 import * as yup from "yup"
-import axios from 'axios'
 import { ColorRing} from 'react-loader-spinner'
 import { Helmet } from 'react-helmet'
 import { cartContext } from '../Context/CartContext'

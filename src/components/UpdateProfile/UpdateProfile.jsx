@@ -45,7 +45,6 @@ export default function UpdateProfile() {
             toast.error(`${data.response.data.errors.msg} - ${data.response.data.errors.value}` , {
                     duration:3000,
                 })
-            console.log(data);
             
             setIsLoading(false)
             }
