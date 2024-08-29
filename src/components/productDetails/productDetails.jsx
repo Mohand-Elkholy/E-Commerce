@@ -1,31 +1,18 @@
 import axios from 'axios';
-import React, { useContext, useState } from 'react'
+import  {  useState } from 'react'
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom'
 import Loading from '../Loading/Loading';
 import { Tooltip } from '@nextui-org/react';
-import toast from 'react-hot-toast';
-import { cartContext } from '../Context/CartContext';
 import { Helmet } from 'react-helmet';
 import IconCart from '../IconCart/IconCart';
 
 export default function ProductDetails() {
     const {id} = useParams()
-    const {addProduct} = useContext(cartContext)
     const [position, setPosition] = useState({x:0 , y:0})
     const [cursorPosition, setCursorPosition] = useState({x:0 , y:0})
     const [show, setShow] = useState(false)
     const [Img, setImg] = useState(null)
-    async function handelAddProduct(id){
-        const resFlag = await addProduct(id)
-        if(resFlag){
-            toast.success("Add Product Successfully" , {
-                duration:2000
-            })
-        }else{
-            
-        }
-    }
     function getProductDetails(){
         return axios.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
     }
@@ -81,7 +68,10 @@ return (
                 </div>}
             </div>
             <div className='flex flex-wrap  items-center justify-center   gap-y-1'>
-                {imgs.map((photo , index)=><div key={index} className={`w-1/${imgs.length >= 4 ? 4 : 3}`}>
+                {console.log(imgs.length )
+                }
+                
+                {imgs.map((photo , index)=><div key={index} className={`${imgs.length >= 4 ?'w-1/4':'w-1/3'}`}>
                     <div className='p-2'>
                         <img src={photo} alt={`image${index}`} onClick={()=>handelImg(photo)} />
                     </div>
