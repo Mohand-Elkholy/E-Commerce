@@ -81,7 +81,7 @@ return (
                 </div>}
             </div>
             <div className='flex flex-wrap  items-center justify-center   gap-y-1'>
-                {imgs.map((photo , index)=><div key={index} className={`w-1/${imgs.length >4?4:imgs.length}`}>
+                {imgs.map((photo , index)=><div key={index} className={`w-1/${imgs.length >= 4 ? 4 : 3}`}>
                     <div className='p-2'>
                         <img src={photo} alt={`image${index}`} onClick={()=>handelImg(photo)} />
                     </div>
