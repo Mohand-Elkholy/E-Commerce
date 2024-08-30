@@ -2,7 +2,7 @@ import  { useContext} from 'react'
 import styles from "./IconWishlist.module.css"
 import { WishlistContext } from '../Context/WishlistContext'
 import toast from 'react-hot-toast'
-export default function IconWishlist({id }) {
+export default function IconWishlist({id}) {
     const {addToWishlist , deleteWishlistItem,  wishlistProducts  } = useContext(WishlistContext)
 
 

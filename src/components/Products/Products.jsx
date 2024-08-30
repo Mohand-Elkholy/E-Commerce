@@ -47,7 +47,7 @@ return (
                 onInput={(e)=>{
                     console.log(e.target.value);
                     if(e.target.value !== ""){
-                    setProducts(data.data.data.filter((x)=>x.title.toLowerCase().includes(e.target.value.toLowerCase())))
+                    setProducts(data.data.data.filter((x)=>x.title.split(" ").slice(0,2).join(" ").toLowerCase().includes(e.target.value.toLowerCase())))
                     console.log(Products);
                     }else{
                         setProducts(null)
