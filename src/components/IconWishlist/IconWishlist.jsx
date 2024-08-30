@@ -1,10 +1,9 @@
-import React, { useContext, useState } from 'react'
+import  { useContext} from 'react'
 import styles from "./IconWishlist.module.css"
 import { WishlistContext } from '../Context/WishlistContext'
 import toast from 'react-hot-toast'
 export default function IconWishlist({id }) {
     const {addToWishlist , deleteWishlistItem,  wishlistProducts  } = useContext(WishlistContext)
-    const[isAdded , setIsAdded] = useState(false) 
 
 
     async function handelWishlist(id){
@@ -13,7 +12,6 @@ export default function IconWishlist({id }) {
             toast.success("Add To Wishlist Successfully" , {
                 duration:2000
             })
-            setIsAdded(!isAdded)
         }else{
             toast.error("Add To Wishlist Error", {
                 duration:2000
@@ -22,7 +20,6 @@ export default function IconWishlist({id }) {
     }
     async function handelDelete(id){
         await deleteWishlistItem(id)
-        setIsAdded(!isAdded)
     }
 
 return (
@@ -30,7 +27,7 @@ return (
     <div key={id} onClick={()=>{
                         
                         
-                        if(isAdded){
+                        if(wishlistProducts?.map((like)=>like._id  == id ).includes(true)){
                             handelDelete(id)
 
                         }else{
