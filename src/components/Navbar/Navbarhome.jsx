@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, DropdownItem, Dropdown, DropdownTrigger, Button, DropdownMenu, Avatar} from "@nextui-org/react";
-
-import styles from "./Navbar.module.css"
 import Logo from "../../assets/icons8-fast-cart-96.png"
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import  { authContext } from '../Context/AuthContext';
